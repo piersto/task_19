@@ -19,4 +19,3 @@ class Application:
     def destroy(self):
         self.webdriver.quit()
 
-        
