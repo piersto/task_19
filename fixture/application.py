@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from fixture.home import HomeHelper
 
