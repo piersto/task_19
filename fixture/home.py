@@ -8,6 +8,7 @@ class HomeHelper:
         self.app = app
 
     def open_home_page(self):
-        self.app.get("http://localhost/litecart/en/")
-        WebDriverWait(self, 10).until(EC.title_is('Online Store | My Store'))
+        webdriver = self.app.webdriver
+        webdriver.get("http://localhost/litecart/en/")
+        WebDriverWait(webdriver, 10).until(EC.title_is('Online Store | My Store'))
 

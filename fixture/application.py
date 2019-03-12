@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from fixture.home import HomeHelper
 
 
 class Application:
@@ -15,6 +16,7 @@ class Application:
         self.webdriver.implicitly_wait(10)
         self.base_url = base_url
         self.webdriver.maximize_window()
+        self.home = HomeHelper(self)
 
     def destroy(self):
         self.webdriver.quit()
